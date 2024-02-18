@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Sistema de SEDEX</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minha Progressive Web App">
+    
+    <link rel="stylesheet" href="./FrontEnd/css/style.css">
+    <link rel="stylesheet" href="./FrontEnd/css/bootstrap530.min.css">
+
+
+    <!-- <link rel="manifest" href="manifest.json" /> -->
+    <link rel="apple-touch-icon" href="./FrontEnd/img/128x128.png" />
+    <link rel="apple-touch-icon" href="./FrontEnd/img/192x192.png" />
+    <link rel="apple-touch-icon" href="./FrontEnd/img/512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#dc3545" />
+    <meta name="theme-color" content="#dc3545" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    
+    <script src="./FrontEnd/js/bootstrap/jquery360.min.js"></script>
+    <script src="./FrontEnd/js/bootstrap/bootstrap462.min.js"></script>
+    <script src="./FrontEnd/js/storage.js"></script>
+    <script type="text/javascript">
+      var logged = JSON.parse(localStorage.getItem('usuario'));
+      if (logged && logged.logado === true) {
+        window.location.href = './pages/cadastroSedex.html';
+      }
+    </script>
+
+</head>
+<body>
+
+<style>
+
+    #pills-tabContent {
+      /* Ajuste as margens ou espaçamento interno conforme necessário */
+      margin-top: 30px; /* Você pode ajustar esse valor */
+      padding: 20px; /* Você pode ajustar esse valor */
+    }
+  </style> 
+
+           
+            <div class="tab-content" id="pills-tabContent">
+               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <h2>Vivendas Do Parque</h2>
+                  <div class="form px-4 pt-5">
+                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" onkeypress="if (event.keyCode === 13) login()">
+                    <button type="button" class="btn btn-primary btn-block w-100" onclick="login()">Entrar</button>
+                  </div>
+               </div>
+            </div>
+
+<!-- <script>
+  if ('serviceWorker' in navigator && 'PushManager' in window) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(registration => {
+      console.log('Service Worker registrado com sucesso');
+    })
+    .catch(error => {
+      console.error('Falha ao registrar o Service Worker:', error);
+      // Adicione um feedback ao usuário aqui, por exemplo, mostrando uma mensagem de erro na tela.
+    });
+}
+  </script> -->
+ 
+
+    
+    <script src="./FrontEnd/js/bootstrap/jquery360.min.js"></script>
+    <script src="./FrontEnd/js/bootstrap/bootstrap462.min.js"></script>
+    <script src="./FrontEnd/js/functions.js"></script>
+</body>
+</html>

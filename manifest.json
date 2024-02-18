@@ -1,0 +1,27 @@
+{
+  "name": "Registro de Sedex - Vivendas",
+  "short_name": "Registro de Sedex",
+  "description": "Uma Progressive Web App simples",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#dc3545",
+  "icons": [
+    {
+      "src": "/FrontEnd/img/128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/FrontEnd/img/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/FrontEnd/img/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
