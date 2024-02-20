@@ -40,12 +40,17 @@ Para configurar e executar o projeto, siga as etapas abaixo:
 3. **Mova o projeto para a pasta www do WampServer:**
 Coloque o diretório do seu projeto na pasta www do WampServer(geralmente em C:\wamp64\www).
 
+## Diretório Windows
+<div align="left">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/1.1.png" alt="Imagem 1" style="width: 30%;">
+</div>
+
 4. **Acesse o phpMyAdmin:**
 Abra o navegador e acesse o [phpMyAdmin](http://localhost/phpmyadmin).
 
 ## phpMyAdmin
 <div align="left">
-  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/2.png" alt="Imagem 1" style="width: 30%;">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/2.png" alt="Imagem 2" style="width: 30%;">
 </div>
 
 Importe o banco de dados:
