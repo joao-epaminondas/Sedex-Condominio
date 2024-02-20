@@ -31,7 +31,7 @@ Para configurar e executar o projeto, siga as etapas abaixo:
 
 3. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/seu-projeto.git
+   git clone https://github.com/joao-epaminondas/Sedex-Condominio.git
 
 Mova o projeto para a pasta www do WampServer:
 Coloque o diretório do seu projeto na pasta www do WampServer.
