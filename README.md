@@ -44,8 +44,8 @@ Coloque o diretório do seu projeto na pasta www do WampServer(geralmente em C:\
 Abra o navegador e acesse o [phpMyAdmin](http://localhost/phpmyadmin).
 
 ## phpMyAdmin
-<div align="center">
-  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/2.png" alt="Imagem 1" style="max-width: 100%; width: 50%;">
+<div align="left">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/2.png" alt="Imagem 1" style="width: 30%;">
 </div>
 
 Importe o banco de dados:
