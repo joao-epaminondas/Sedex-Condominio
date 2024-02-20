@@ -22,7 +22,15 @@ Descrição curta do projeto.
   - MySQL
 
 ## Instalação
-Forneça instruções sobre como instalar o projeto.
+
+Para configurar e executar o projeto, siga as etapas abaixo:
+
+1. **Baixe o WampServer:**
+   Certifique-se de ter o WampServer instalado na sua máquina. Você pode baixá-lo em [WampServer](https://www.wampserver.com/).
+
+2. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/seu-projeto.git
 
 ## Como Usar
 Explique como usar o projeto e forneça exemplos.
