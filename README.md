@@ -26,7 +26,7 @@ Descrição curta do projeto.
 Para configurar e executar o projeto, siga as etapas abaixo:
 
 1. **Baixe o WampServer:**
-   Certifique-se de ter o WampServer instalado na sua máquina. Você pode baixá-lo em [WampServer](https://www.wampserver.com/).
+   Certifique-se de ter o WampServer instalado na sua máquina. Você pode baixá-lo em [WampServer](https://www.wampserver.com/).  
    Versão recomendada - 3.3.0
 
 3. **Clone o repositório:**
