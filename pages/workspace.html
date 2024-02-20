@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <title>Formulário Sedex</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+      <link rel="icon" type="image/x-icon" href="../icon.ico">
+      <link rel="stylesheet" href="../FrontEnd/css/bootstrap530.min.css">
+      <link rel="stylesheet" href="../FrontEnd/css/autocomplete.min.css">
+      <link rel="stylesheet" href="../FrontEnd/css/style.css">
+      <link rel="stylesheet" href="../FrontEnd/css/font-awesome-all.min.css" />
+      <script src="../FrontEnd/js/bootstrap/jquery360.min.js"></script>
+      <script src="../FrontEnd/js/bootstrap/bootstrap462.min.js"></script>
+      <script src="../FrontEnd/js/storage.js"></script>
+   </head>
+   <body class="body_sedex">
+      <div class="fixed-menu2">
+         <div id="menu2" class="all-menu offline" style="display: none;">Voce está Offline</div>
+      </div>
+      <div class="fixed-menu">
+         <div class="all-menu success-menu" style="display:none">Registrado com Sucesso</div>
+         <div class="all-menu success-ass" style="display:none">Assinado com Sucesso</div>
+         <div class="all-menu lote-menu" style="display:none">Lote Vazio</div>
+         <div class="all-menu error-menu" style="display:none">Erro ao enviar para Servidor</div>
+         <a href="#" class="menu-item" id="botao1" data-color="cor-div1">
+         <span class="menu-text">
+         <span class="desktop-only">Registrar Entrada</span>
+         </span>
+         <i class="fas fa-arrow-up"></i>
+         </a>
+         <a href="#" class="menu-item" id="botao2" data-color="cor-div2">
+         <span class="menu-text">
+         <span class="desktop-only">Registrar Saída</span>
+         </span>
+         <i class="fas fa-arrow-down"></i>
+         </a>
+         <a href="#" class="menu-item" id="botao3" data-color="cor-div3">
+         <span class="menu-text">
+         <span class="desktop-only">Pesquisar</span>
+         </span>
+         <i class="fas fa-search"></i>
+         </a>
+         <a href="#" class="menu-item" id="botao4" data-color="cor-div4">
+         <span class="menu-text">
+         <span class="desktop-only">Perfil</span>
+         </span>
+         <i class="fas fa-user"></i>
+         </a>
+         <div class="menu-separator"></div>
+         <span class="menu-item2">
+            <div id="connection-status" class="all-menu2">
+            </div>
+         </span>
+      </div>
+      <!-- Div 1 ------------------------------------------------------------- -->
+      <div class="alert mb-5 div" id="div1">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="header">
+                  <h1 class="mt-1">Formulário Sedex</h1>
+                  <button id="btnOcultarForm" class="btn btn-dark">
+                  <i id="btnIcon" class="fas fa-chevron-up"></i>
+                  </button>
+               </div>
+               <div class="col-lg-6 col-md-12 col-sm-12">
+                  <form id="sedexForm" >
+                     <div class="mb-2">
+                        <label for="destinatario" class="form-label">Destinatário:</label>
+                        <input type="text" name="destinatario" class="form-control" id="destinatario" required onblur="preencherEndereco()">
+                     </div>
+                     <div class="row">
+                        <div class="mb-2 col-sm-6 col-md-6">
+                           <label for="rua" class="form-label">Rua:</label>
+                           <select name="rua" id="rua" class="form-select" required>
+                              <option value="">Selecione uma opção</option>
+                              <option value="Rua1">Rua 1</option>
+                              <option value="Rua2">Rua 2</option>
+                              <option value="Rua3">Rua 3</option>
+                              <option value="Rua4">Rua 4</option>
+                              <option value="Rua5">Rua 5</option>
+                              <option value="Rua6">Rua 6</option>
+                           </select>
+                        </div>
+                        <div class="mb-2 col-sm-3 col-md-3">
+                           <label for="numerorua" class="form-label">Número:</label>
+                           <input type="number" name="numerorua" class="form-control" id="numerorua" required>
+                        </div>
+                        <div class="mb-2 col-sm-3 col-md-3">
+                           <label for="cxp" class="form-label">Caixa Postal:</label>
+                           <input type="number" name="cxp" class="form-control" id="cxp" required >
+                        </div>
+                     </div>
+                     <div class="mb-2">
+                        <label for="numeroSedex" class="form-label">Número Sedex:</label>
+                        <select name="numeroSedex" class="form-control" id="numeroSedex" required></select>
+                     </div>
+                     <div class="mb-2">
+                        <label for="descricao" class="form-label">Descrição/Codigo:</label>
+                        <input type="text" name="descricao" class="form-control" id="descricao" inputmode="textCapCharacters" autocapitalize="characters" required>
+                     </div>
+                     <div class="mb-2">
+                        <label for="entrada_funcionario" class="form-label">Entrada Funcionario:</label>
+                        <input type="text" name="entrada_funcionario" class="form-control" id="entrada_funcionario" readonly>
+                     </div>
+                     <div class="mb-3">
+                        <div class="form-check">
+                           <input class="form-check-input larger-checkbox" type="checkbox" id="check1" data-toggle="modal" data-target="#div_assinar1">
+                           <label class="form-check-label ms-2 mt-1" for="check1">
+                           Assinar Agora
+                           </label>
+                        </div>
+                     </div>
+                     <button type="button" class="btn btn-success" onclick="inserir()">Novo Registro <i class="fas fa-plus"></i></button>
+                     <button type="button" class="btn btn-danger" onclick="fecharLote()">Fechar Lote <i class="fas fa-cloud-upload-alt"></i></button>
+                  </form>
+               </div>
+               <!-- Tabela -->
+               <div class="table-container mt-4 col-lg-6 col-md-12 col-sm-12">
+                  <div class="" id="gerartable"></div>
+                  <div id="divSemRegistros" style="display: none; text-align: center;">Não há registros disponíveis.</div>
+                  <nav aria-label="Navegação de página">
+                     <ul id="pagination" class="pagination justify-content-center"></ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Div 2 --------------------------------------------------------------------------------------------------- -->
+      <div class="alert mb-5 div" id="div2">
+         <div class="container-fluid custom-container">
+            <div class="row">
+               <div class="header">
+                  <h1 class="mt-1">Sedex Vigente</h1>
+               </div>
+               <div class="form-group d-flex align-items-center">
+                  <input type="text" class="form-control" id="inputSearch" placeholder="Número do Sedex ou Destinatario">
+                  <button type="button" class="btn btn-primary" id="btnSearch" style="margin-left: 10px;">Buscar</button>
+               </div>
+               <div id="resultContainer" class="mt-3 d-flex align-items-center justify-content-center">
+                  <div id="button-container2"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Div 3 ---------------------------------------------------------------- -->
+      <div class="alert div" id="div3">
+         <div class="container-fluid custom-container">
+            <div class="row">
+               <div class="header">
+                  <h1 class="mt-1">Consulta Sedex</h1>
+               </div>
+               <div class="col-lg-6 col-md-12 col-sm-12">
+                  <label for="morador" class="form-label">Morador:</label>
+                  <input type="text" name="morador" class="form-control" id="morador" onblur="a1()" onkeypress="if (event.keyCode === 13) a1()">
+               </div>
+               <div id="userResults" class="mt-3 d-flex align-items-center justify-content-center"></div>
+            </div>
+         </div>
+      </div>
+      <!-- Div 4 ---------------------------------------------------------------- -->
+      <div class="alert div" id="div4">
+         <div class="container-fluid custom-container">
+            <div class="row">
+               <div class="header">
+                  <h1 class="mt-1">Usuario Logado -</h1>
+                  <h4 id="usuario_logado"></h4>
+               </div>
+               <button type="button" class="btn btn-dark btn-lg btn-block mt-4 mb-2" id="btn-logout">Fazer Logout <i id="btnOut" class="fas fa-sign-out-alt"></i>
+               </button>
+               <button type="button" class="btn btn-danger btn-lg btn-block mb-2" onclick="repor_nsedex()">Repor Numeros Sedex <i class="fa fa-redo"></i></button>
+               <button type="button" class="btn btn-info btn-lg btn-block menu-item" id="botao5" data-color="cor-div5" onclick="informacoes()">Informações <i class="fas fa-question-circle"></i></button>
+            </div>
+         </div>
+      </div>
+      <!-- Modals ---------------------------------------------------------------- -->
+      <div class="modal fade" id="div_assinar1" tabindex="-1" role="dialog" aria-labelledby="div_assinar1" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen" role="document">
+            <div class="modal-content">
+               <div class="modal-header d-block">
+                  <button class="btn btn-primary w-100 mt-2" id="back-button">
+                  <i class="fas fa-arrow-left"></i> Voltar para o formulário
+                  </button>
+                  <button class="btn btn-danger w-100 mt-2" id="clear-button">
+                  Limpar Assinatura <i class="fas fa-trash-alt"></i> 
+                  </button>
+               </div>
+               <div class="modal-body row align-center" style="overflow: hidden;">
+                  <div class="col-md-12">
+                     <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+                        <canvas id="canvas1" width="390" height="500" style="border: 1px solid #000"></canvas>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer justify-content-start" style="">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="div_verinfo" class="signature-container" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+         <div class="button-container" style="margin-top: 0">
+            <button class="btn btn-lg btn-primary" id="back-button">
+            <i class="fas fa-arrow-left"></i> Voltar para o formulário
+            </button>
+         </div>
+      </div>
+      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="btn btn-primary w-100" data-dismiss="modal"><i class="fas fa-arrow-left"></i> Voltar para o formulário</button>
+               </div>
+               <div class="modal-body row align-center" style="overflow: hidden;">
+                  <div class="col-md-12">
+                     <h2 class="" style="text-align: left;">
+                        Detalhes do Sedex 
+                        <span style="color: #ff0000">Nº<span id="modalNumeroSedex"></span></span>
+                     </h2>
+                     <p id="modalDestinatario"></p>
+                     <p id="modalRua"></p>
+                     <p id="modalNumeroRua"></p>
+                     <p id="modalCXP"></p>
+                     <p id="modalDescricao"></p>
+                     <p id="">Assinatura:</p>
+                     <img id="modalimg" class="img-fluid max-image-size" src="#">
+                  </div>
+               </div>
+               <div class="modal-footer justify-content-start" style="">
+                  <p class="w-100" id="modalentrada_funcionario"></p>
+                  <p class="w-100" id="modalsaida_funcionario"></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModal4" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen" role="document">
+            <div class="modal-content">
+               <div class="modal-header d-block">
+                  <button type="button" id="back4" class="btn btn-primary w-100" data-dismiss="modal"><i class="fas fa-arrow-left" ></i> Voltar para o formulário</button>
+                  <button id="darBaixaButton1" class="btn btn-warning w-100 mt-2">Assinar Sedex <i class="fas fa-signature"></i> </button>
+                  <button id="clear-button2" class="btn btn-danger w-100 mt-2" style="display: none;">
+                  Limpar Assinatura <i class="fas fa-trash-alt"></i> 
+                  </button>
+               </div>
+               <div class="modal-body row align-center" style="overflow: hidden;">
+                  <div class="col-md-12" id="d-sedex">
+                     <h2 style="text-align: left;">
+                        Detalhes do Sedex 
+                        <span style="color: #ff0000">Nº<span id="modalNumeroSedex2"></span></span>
+                     </h2>
+                     <p id="modalDestinatario2"></p>
+                     <p id="modalRua2"></p>
+                     <p id="modalNumeroRua2"></p>
+                     <p id="modalCXP2"></p>
+                     <p id="modalDescricao2"></p>
+                     <p id="">Assinatura:</p>
+                     <img id="modalimg2" class="img-fluid max-image-size" src="#">
+                  </div>
+                  <div class="col-md-12" id="c-sedex" style="display:none;">
+                     <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+                        <canvas id="canvas2" width="390" height="500" style="border: 1px solid #000"></canvas>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer justify-content-start" >
+                  <div id="mf-info">
+                     <p class="w-100" id="modalentrada_funcionario2"></p>
+                     <p class="w-100" id="modalsaida_funcionario2"></p>
+                  </div>
+                  <div class="w-100" id="mf-baixa" style="display: none;">
+                     <button id="darBaixaButtonConfirm" class="btn btn-danger w-100" onclick="inserir2()" data-dismiss="modal">Dar Baixa <i class="fas fa-arrow-down"></i></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Scripts -------------------------------------------------------- -->
+      <script src="../FrontEnd/js/autocomplete/awesomplete.min.js"></script>
+      <script src="../FrontEnd/js/autocomplete/moradores.js"></script>
+      <script src="../FrontEnd/js/pen/signature_pad.min.js"></script>
+      <script src="../FrontEnd/js/pen/pen.js"></script>
+      <script src="../FrontEnd/js/functions.js"></script>
+      <script src="../FrontEnd/js/app1.js"></script>
+      <script src="../FrontEnd/js/app2.js"></script>
+      <script src="../FrontEnd/js/app3.js"></script>
+      <script src="../FrontEnd/js/app4.js"></script>
+   </body>
+</html>

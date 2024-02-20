@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <title>Sistema de SEDEX</title>
+      <meta charset="utf-8">
+      <link rel="icon" type="image/x-icon" href="icon.ico">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./FrontEnd/css/style.css">
+      <link rel="stylesheet" href="./FrontEnd/css/bootstrap530.min.css">
+      <script src="./FrontEnd/js/bootstrap/jquery360.min.js"></script>
+      <script src="./FrontEnd/js/bootstrap/bootstrap462.min.js"></script>
+      <script src="./FrontEnd/js/storage.js"></script>
+   </head>
+   <body>
+      <div class="fixed-menu">
+         <div class="all-menu error-menu" style="display:none"></div>
+      </div>
+      <div class="tab-content pills-tabContent" id="pills-login">
+         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <h2>SISTEMA DE SEDEX</h2>
+            <div class="form px-4 pt-5">
+               <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+               <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+               <button type="button" class="btn btn-primary btn-block w-100" id="btn-login">Entrar</button>
+            </div>
+         </div>
+      </div>
+      <div class="tab-content pills-tabContent" id="pills-cadastro">
+         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <h2>SISTEMA DE SEDEX</h2>
+            <div class="form px-4 pt-5">
+               <form id="cadastroForm">
+                  <input type="text" class="form-control" id="cad_usuario" name="cad_usuario" placeholder="Usuario" required>
+                  <input type="text" class="form-control" id="cad_nome" name="cad_nome" placeholder="Nome Completo" required>
+                  <input type="text" class="form-control" id="cad_senha" name="cad_senha" placeholder="Senha" required>
+                  <button type="button" class="btn btn-primary btn-block w-100" id="btn-register">Cadastrar</button>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script src="./FrontEnd/js/bootstrap/jquery360.min.js"></script>
+      <script src="./FrontEnd/js/bootstrap/bootstrap462.min.js"></script>
+      <script src="./FrontEnd/js/functions.js"></script>
+   </body>
+</html>
