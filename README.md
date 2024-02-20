@@ -55,6 +55,13 @@ Abra o navegador e acesse o [phpMyAdmin](http://localhost/phpmyadmin).
 
 Importe o banco de dados:
 
+<div align="left">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/3.png" alt="Imagem 3" style="width: 50%;">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/4.png" alt="Imagem 4" style="width: 50%;">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/5.png" alt="Imagem 5" style="width: 50%;">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/6.png" alt="Imagem 6" style="width: 50%;">
+</div>
+
 Crie um novo banco de dados chamado sedex no phpMyAdmin.
 Selecione o banco de dados recém-criado.
 Vá para a aba "Importar" e escolha o arquivo sedex.sql do diretório BackEnd/sql.
