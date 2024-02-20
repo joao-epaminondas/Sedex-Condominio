@@ -45,7 +45,7 @@ Abra o navegador e acesse o [phpMyAdmin](http://localhost/phpmyadmin).
 
 ## phpMyAdmin
 <div align="center">
-  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/2.png" alt="Imagem 1" style="max-width: 70%;">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/2.png" alt="Imagem 1" style="max-width: 100%; width: 50%;">
 </div>
 
 Importe o banco de dados:
