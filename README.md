@@ -29,15 +29,15 @@ Para configurar e executar o projeto, siga as etapas abaixo:
    Certifique-se de ter o WampServer instalado na sua máquina. Você pode baixá-lo em [WampServer](https://www.wampserver.com/).  
    Versão recomendada - 3.3.0
 
-3. **Clone o repositório:**
+2. **Clone o repositório:**
    ```bash
    git clone https://github.com/joao-epaminondas/Sedex-Condominio.git
-
-Mova o projeto para a pasta www do WampServer:
+   
+3. **Mova o projeto para a pasta www do WampServer:**
 Coloque o diretório do seu projeto na pasta www do WampServer.
 
-Acesse o phpMyAdmin:
-Abra o navegador e acesse o phpMyAdmin em http://localhost/phpmyadmin.
+4. **Acesse o phpMyAdmin:**
+Abra o navegador e acesse o [phpMyAdmin](http://localhost/phpmyadmin).
 
 Importe o banco de dados:
 
