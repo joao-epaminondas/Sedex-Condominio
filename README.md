@@ -34,7 +34,7 @@ Para configurar e executar o projeto, siga as etapas abaixo:
    git clone https://github.com/joao-epaminondas/Sedex-Condominio.git
    
 3. **Mova o projeto para a pasta www do WampServer:**
-Coloque o diretório do seu projeto na pasta www do WampServer.
+Coloque o diretório do seu projeto na pasta www do WampServer(geralmente em C:\wamp64\www).
 
 4. **Acesse o phpMyAdmin:**
 Abra o navegador e acesse o [phpMyAdmin](http://localhost/phpmyadmin).
