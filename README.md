@@ -10,7 +10,16 @@ Descrição curta do projeto.
 - [Licença](#licença)
 
 ## Tecnologias
-Liste as principais tecnologias usadas no projeto.
+- **Front-end:**
+  - HTML
+  - CSS
+  - JavaScript
+
+- **Back-end:**
+  - PHP
+
+- **Banco de Dados:**
+  - MySQL
 
 ## Instalação
 Forneça instruções sobre como instalar o projeto.
