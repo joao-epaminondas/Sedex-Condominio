@@ -33,14 +33,18 @@ Para configurar e executar o projeto, siga as etapas abaixo:
    Versão recomendada - 3.3.0
 
 2. **Clone o repositório:**
-   ```bash
+```bash
    git clone https://github.com/joao-epaminondas/Sedex-Condominio.git
+```
    
 3. **Mova o projeto para a pasta www do WampServer:**
 Coloque o diretório do seu projeto na pasta www do WampServer(geralmente em C:\wamp64\www).
 
 4. **Acesse o phpMyAdmin:**
 Abra o navegador e acesse o [phpMyAdmin](http://localhost/phpmyadmin).
+
+## Layout mobile
+![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
 
 Importe o banco de dados:
 
