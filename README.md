@@ -42,7 +42,7 @@ Coloque o diretório do seu projeto na pasta www do WampServer(geralmente em C:\
 
 ## Diretório Windows
 <div align="left">
-  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/1.1.png" alt="Imagem 1" style="width: 30%;">
+  <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/1.1.png" alt="Imagem 1" style="width: 70%;">
 </div>
 
 4. **Acesse o phpMyAdmin:**
