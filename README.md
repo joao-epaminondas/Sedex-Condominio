@@ -75,8 +75,5 @@ Veja que ao lado esquerdo a estrutura do banco de dados foi importada com sucess
 ## Como Usar
 Explique como usar o projeto e forneça exemplos.
 
-## Contribuição
-Explique como as pessoas podem contribuir para o projeto.
-
 ## Licença
 [License](https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/LICENSE])
