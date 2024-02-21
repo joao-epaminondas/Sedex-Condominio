@@ -1,5 +1,5 @@
 # Sedex Organizer () 
-[![Build Status]([https://travis-ci.com/seu-usuario/seu-repositorio.svg?branch=main](https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/LICENSE))](https://travis-ci.com/seu-usuario/seu-repositorio)
+[![License]([https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/LICENSE)]](https://travis-ci.com/seu-usuario/seu-repositorio)
 
 Bem-vindo ao Sedex Organizer, a solução definitiva para simplificar o cadastro de encomendas em seu condomínio. Nosso webapp foi desenvolvido com o propósito de tornar o processo de recebimento de Sedex mais eficiente, organizado e acessível para todos os moradores.
 
