@@ -1,7 +1,4 @@
-# Projeto Sedex 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
-
-# Sedex Organizer
+# Sedex Organizer [![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
 
 Bem-vindo ao Sedex Organizer, a solução definitiva para simplificar o cadastro de encomendas em seu condomínio. Nosso webapp foi desenvolvido com o propósito de tornar o processo de recebimento de Sedex mais eficiente, organizado e acessível para todos os moradores.
 
