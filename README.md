@@ -53,21 +53,24 @@ Abra o navegador e acesse o [phpMyAdmin](http://localhost/phpmyadmin).
   <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/2.png" alt="Imagem 2" style="width: 30%;">
 </div>
 
-Importe o banco de dados:
-
+Vá para a aba "Importar" e escolha o arquivo sedex.sql do diretório BackEnd/sql.
 <div align="left">
   <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/3.png" alt="Imagem 3" style="width: 100%;">
+</div>
+Clique em "Escolher Ficheiro"  
+Selecione o banco de dados bd_sedex.
+<div align="left">
   <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/4.png" alt="Imagem 4" style="width: 100%;">
+</div>
+Clique em "Importar" para importar a estrutura do banco de dados.
+<div align="left">
   <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/5.png" alt="Imagem 5" style="width: 100%;">
+</div>
+Veja que ao lado esquerdo a estrutura do banco de dados foi importada com sucesso!
+<div align="left">
   <img src="https://github.com/joao-epaminondas/Sedex-Condominio/blob/main/Documentacao/instalacao/6.png" alt="Imagem 6" style="width: 100%;">
 </div>
 
-Crie um novo banco de dados chamado sedex no phpMyAdmin.
-Selecione o banco de dados recém-criado.
-Vá para a aba "Importar" e escolha o arquivo sedex.sql do diretório BackEnd/sql.
-Clique em "Executar" para importar a estrutura do banco de dados.
-Acesse o projeto no navegador:
-Abra seu navegador e acesse http://localhost/seu-projeto (substitua seu-projeto pelo nome do diretório do seu projeto).
 
 ## Como Usar
 Explique como usar o projeto e forneça exemplos.
